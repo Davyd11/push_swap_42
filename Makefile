@@ -6,12 +6,12 @@
 #    By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/31 13:02:36 by dpuente-          #+#    #+#              #
-#    Updated: 2021/04/01 14:12:18 by dpuente-         ###   ########.fr        #
+#    Updated: 2021/04/01 19:45:20 by dpuente-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS_CHECK				=	srcs/checker.c \
-							check/initialize_checker.c \
+							check/initialize_checker.c check/error_display.c check/operations1.c \
 							utils/libft/ft_atoi.c \
 
 SRCS_PUSH				=	srcs/push_swap.c \
@@ -40,9 +40,12 @@ clean:
 fclean:					clean
 						$(RM) $(NAME_P) $(NAME_C)
 
-re:						fclean all
+normi:
+						norminette $(SRCS_CHECK) $(SRCS_PUSH)
 
 run:					
 						./checker 1 2 3 4 5 6
 
-.PHONY:					all clean fclean
+re:						fclean all
+
+.PHONY:					all clean fclean re run normi

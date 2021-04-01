@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   error_display.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/01 19:23:19 by dpuente-         ###   ########.fr       */
+/*   Created: 2021/04/01 18:43:33 by dpuente-          #+#    #+#             */
+/*   Updated: 2021/04/01 19:07:00 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include "utils/libft/libft.h"
+#include "../push_swap.h"
 
-
-typedef struct	s_input_list
+void	arg_num(char **argv)
 {
-	int			n_numbers;
-	int			*number_list;
-	int			*stack_a;
-	int			*stack_b;
-	int			stack_temp;
+	int x;
+	int y;
 
-}				t_input_list;
-
-
-void	initialize(t_input_list	*input_list, int argc);
-void	int_list(t_input_list	*input_list, char **argv);
-void 	arg_num(char **argv);
+	y = 0;
+	x = 1;
+	while (argv[x] != NULL)
+	{
+		while (argv[x][y] != '\0')
+		{
+			if (argv[x][y] < 48 || argv[x][y] > 57)
+			{
+				write(1, "Error\n", 7);
+				exit(0);
+			}
+			y++;
+		}
+		y = 0;
+		x++;
+	}
+}
