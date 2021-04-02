@@ -6,7 +6,7 @@
 #    By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/31 13:02:36 by dpuente-          #+#    #+#              #
-#    Updated: 2021/04/01 19:45:20 by dpuente-         ###   ########.fr        #
+#    Updated: 2021/04/02 19:19:36 by dpuente-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ NAME_P					=	push_swap
 all:					$(NAME_C) $(NAME_P)
 
 $(NAME_C):				$(OBJS_C)
-						gcc  $(CFLAGS) -o $(NAME_C) $(OBJS_C)
+						gcc $(CFLAGS) -o $(NAME_C) $(OBJS_C)
 
 $(NAME_P):				$(OBJS_P)
 						gcc  $(CFLAGS) -o $(NAME_P) $(OBJS_P)
@@ -44,7 +44,7 @@ normi:
 						norminette $(SRCS_CHECK) $(SRCS_PUSH)
 
 run:					
-						./checker 1 2 3 4 5 6
+						./checker 9 5 1 7 8 4 11 12 10 33 234 334
 
 re:						fclean all
 

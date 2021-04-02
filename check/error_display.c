@@ -6,13 +6,13 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 18:43:33 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/01 19:07:00 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/02 12:51:12 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	arg_num(char **argv)
+void	arg_num(char **argv)//falta hacer la comprovacion de numeros repetidos
 {
 	int x;
 	int y;
