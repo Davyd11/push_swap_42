@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/02 13:16:07 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/08 21:11:21 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,29 @@
 
 typedef struct	s_input_list
 {
-	int			n_numbers;
-	int			*number_list;
-	int			*stack_a;
-	int			*stack_b;
-	int			stack_temp;
+	int			n_numbers;						//number of arguments input
+	int			*number_list;					//the list of numbers
 
 }				t_input_list;
 
+typedef struct	node
+{
+	int				val;
+	struct node		*next;
+	struct node		*prev;
+}				stack_a;
 
-void	initialize(t_input_list	*input_list, int argc);//initialize_checker.c
-void	int_list(t_input_list	*input_list, char **argv);//initialize_checker.c
-void 	arg_num(char **argv);//error_display.c
-int		checker(t_input_list *input_list);//checker.c
-void	print_array(t_input_list *input_list);//checker.c///////////////////////////////////////////
+/*typedef struct	node_b
+{
+	int				val;
+	struct node	*	next;
+	struct node	*	prev;
+}				stack_b;*/
+
+
+void	initialize(t_input_list	*input_list, int argc);							//initialize_checker.c
+void	int_list(t_input_list	*input_list, char **argv);						//initialize_checker.c
+void 	arg_num(char **argv);													//error_display.c
+int		checker(t_input_list *input_list);										//checker.c
+//void	print_array(stack_a *head);//checker.c///////////////////////////////////////////
 
