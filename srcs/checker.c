@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:21:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/08 21:13:58 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/09 13:59:09 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@
 /////////////////////////////////
 void	print_stack(stack_a *head) // llama al principio de la lista ?
 {
-	stack_a * current = head; //
+	stack_a * current = head;
+	printf("  A\t  B\n-----\t-----\n");
 	while(current != NULL)
 	{
 		printf("%d\n", current->val);
 		current = current->next;
 	}
+	printf("\n-----\t-----\n");
 }
 
 /////////////////////////////////
@@ -42,42 +44,30 @@ void	print_stack(stack_a *head) // llama al principio de la lista ?
 int main (int argc, char ** argv)
 {
 	t_input_list	input_list;
-	stack_a 		n1, n2, n3, n4;
 	stack_a			*head, *tail;
+	stack_a			*tmp;
 
-	head = &n1;
-	tail = &n4;
-	
-	n1.val = 1;
-	n2.val = 2;
-	n3.val = 3;
-	n4.val = 4;
-	n1.next = &n2;
-	n2.next = &n3;
-	n3.next = &n4;
-	n4.next = NULL;
-	
 	initialize(&input_list, argc); 						//inicio las varaiable de la estructura(contiene un malloc para guardar los numeros)
 	int_list(&input_list, argv);
+
+	head = NULL;
+	tail = NULL;
+
+	int n = 0;
+	tmp = create_new_node(input_list.number_list[n]);
+	head = tmp;
+	tail = tmp;
+	n++;
+	while(n < input_list.n_numbers)
+	{
+		tmp = create_new_node(input_list.number_list[n]);
+		tmp->next = head;
+		head = tmp;
+		n++;
+	}
 	print_stack(head);
-	
- 
-	/*arg_num(argv);										//compruebo que los argumentos son validos(solo numeros)
-	initialize(&input_list, argc); 						//inicio las varaiable de la estructura(contiene un malloc para guardar los numeros)
-	int_list(&input_list, argv);						//introduzco los argimentos en la estructura para poder manejarlosx
-														//terminar con los movimientos en operations1.c
-	
-	print_array(&input_list, &stack_a);// imprime el stack para desarrollo//////////////////////////////////////////////////////////////////////
-	free(input_list.number_list);*/
-
-
-
-	
 	//-->free del stack a y b<--//
 
-
-
-	
 	/////////////////////////////////
 	//printf("\n\n\n\n-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/\n\n\n\n");
 	//system("leaks checker");
