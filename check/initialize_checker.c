@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:50:11 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/09 10:51:10 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/09 22:02:45 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,7 @@ void	initialize(t_input_list	*input_list, int argc)
 	input_list->number_list = (int *)malloc(sizeof(int) * input_list->n_numbers);
 }
 
-stack_a	*create_new_node(int val)									//crea un nuevo nodo al principio
-{
-	stack_a *current = malloc(sizeof(stack_a));
-	current->prev = NULL;
-	current->val = val;
-	current->next = NULL;
-	return current;
-}
-
-void	int_list(t_input_list *input_list, char ** argv)
+void	int_list(t_input_list *input_list, char **argv)
 {
 	int count_argv;
 
@@ -40,3 +31,19 @@ void	int_list(t_input_list *input_list, char ** argv)
 	}
 }
 
+stack_a	*create_new_node(int val)
+{
+	stack_a *current = malloc(sizeof(stack_a));
+	current->prev = NULL;
+	current->val = val;
+	current->next = NULL;
+	return current;
+}
+
+void check_arg(int argc, char **argv)
+{
+	if (argc == 2)
+	{
+		printf("%s",ft_split(argv[1], ' ')); //guardar el contenido de split en un doble puntero
+	}
+}
