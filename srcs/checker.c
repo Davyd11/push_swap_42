@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:21:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/12 11:57:53 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/14 14:14:34 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ stack_a		*list_in(stack_a *head, stack_a *tail, t_input_list *input_list)
 	tmp = create_new_node(input_list->number_list[n]);
 	head = tmp; // head contiene la posicion del nuevo nodo
 	tail = tmp;
-	tmp->prev == NULL;
+	tmp->prev = NULL;
 	n++;
 	while(n < input_list->n_numbers)
 	{
@@ -60,10 +60,21 @@ stack_a		*find_node(stack_a *head, int number)	// encuentra la posicion del valo
 	}
 	return NULL;
 }
-/*stack_a		*remove_node(stack_a *head, stack_a *node_to_remove)
+
+stack_a		*position_node(stack_a *head, int position)	// encuentra el nodo con la posicion que indicas(el 3 numero de la lista, te retornara la posicion en memoria del 3er numero)
 {
+	stack_a	*tmp = head;
+	int count;
 	
-}*/
+	count = 1;
+	while (count < position && tmp != NULL)
+	{
+		count++;
+		tmp = tmp->next;
+	}
+
+	return (tmp);
+}
 
 int			main (int argc, char ** argv)
 {
@@ -77,6 +88,11 @@ int			main (int argc, char ** argv)
 	check_arg(argc, argv, &input_list);
 	head = list_in(head, tail, &input_list);		//retornar la posicion mamahuevo por eso hay que guardarlo en head
 	print_stack(head);
+	//printf("%p--%p", position_node(head, 2), position_node(head, 1));
+	head = sa(head, position_node(head, 1), position_node(head, 2));
+	print_stack(head);
+
+	
 	//-->free del stack a y b<--//
 
 	/////////////////////////////////

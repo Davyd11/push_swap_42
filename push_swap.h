@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/12 10:36:31 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/14 12:40:30 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,12 @@ typedef struct	node
 	struct node		*prev;
 }				stack_a;
 
-/*typedef struct	node_b
-{
-	int				val;
-	struct node	*	next;
-	struct node	*	prev;
-}				stack_b;*/
-
-
 void	initialize(t_input_list	*input_list, int argc);							//initialize_checker.c
-void	int_list(t_input_list	*input_list, char **argv);						//initialize_checker.c
-void 	check_arg(int argc, char **argv, t_input_list *input_list);										//initialize_checker.c
+void	int_list(t_input_list *input_list, char **argv, int argc);				//initialize_checker.c
+void 	check_arg(int argc, char **argv, t_input_list *input_list);				//initialize_checker.c
 void 	arg_num(char **argv);													//error_display.c
 int		checker(t_input_list *input_list);										//checker.c
-stack_a	*create_new_node(int val);
-//void	print_array(stack_a *head);//checker.c///////////////////////////////////////////
+stack_a	*create_new_node(int val);												//checker.c
+//OPERATIONS
+stack_a	*sa(stack_a *head, stack_a *first, stack_a *second);					//operations1.c
 
