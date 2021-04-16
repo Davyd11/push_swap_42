@@ -6,7 +6,7 @@
 #    By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/31 13:02:36 by dpuente-          #+#    #+#              #
-#    Updated: 2021/04/14 10:01:13 by dpuente-         ###   ########.fr        #
+#    Updated: 2021/04/16 09:42:47 by dpuente-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ $(NAME_C):				$(OBJS_C)
 
 $(NAME_P):				$(OBJS_P)
 						gcc  $(CFLAGS) -o $(NAME_P) $(OBJS_P)
-
+						
 clean:
 						$(RM) $(OBJS_P) $(OBJS_C)
 

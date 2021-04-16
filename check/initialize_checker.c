@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:50:11 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/14 12:35:11 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/16 09:24:34 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ void	int_list(t_input_list *input_list, char **argv, int argc)
 	}
 }
 
-stack_a	*create_new_node(int val)
+stack_n	*create_new_node(int val)
 {
-	stack_a *current = malloc(sizeof(stack_a));
+	stack_n *current = malloc(sizeof(stack_n));
 	current->prev = NULL;
 	current->val = val;
 	current->next = NULL;
