@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 11:49:03 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/19 13:26:47 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,12 @@ int		checker(t_input_list *input_list);										//checker.c
 int		n_nodes(stack_n *head);													//operations1.c
 void	print_stack(t_input_list *input_list);									//global_functions.c
 int		filtr_instr(t_input_list * input_list);									//filtr_instr.c
-int		pa(t_input_list *input_list);
+int		pa(t_input_list *input_list);											//operations1.c
+int		pb(t_input_list *input_list);											//operations1.c
+int		ra(t_input_list *input_list);											//operations2.c
+int		rb(t_input_list *input_list);											//operations2.c
+int		rra(t_input_list *input_list);											//operations2.c
+int		rrb(t_input_list *input_list);											//operations2.c
 stack_n	*create_new_node(int val);												//checker.c
 stack_n	*find_node(stack_n *head, int number);									//global_functions.c
 stack_n	*list_in(stack_n *head, t_input_list *input_list);						//global_functions.c

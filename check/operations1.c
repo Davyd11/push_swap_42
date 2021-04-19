@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 19:25:09 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 11:36:34 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/19 12:08:06 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,13 @@ int		pa(t_input_list *input_list)
 {
 	stack_n *tmp;
 
-	printf("%d", n_nodes(input_list->b));
 	if (n_nodes(input_list->b) <= 1)
 		return (0);
 	tmp = input_list->a;
 	input_list->a->prev = input_list->b;
 	input_list->a = input_list->b;
-	input_list->a->next = tmp;
 	input_list->b = input_list->b->next;
+	input_list->a->next = tmp;
 	return (1);									//return 1 if the function run correctly
 }
 
@@ -72,8 +71,8 @@ int		pb(t_input_list *input_list)
 	tmp = input_list->b;
 	input_list->b->prev = input_list->a;
 	input_list->b = input_list->a;
-	input_list->b->next = tmp;
 	input_list->a = input_list->a->next;
+	input_list->b->next = tmp;
 	return (1);									//return 1 if the function run correctly
 }
 
@@ -94,10 +93,3 @@ stack_n	*ra_rb(stack_n *head)
 	tail->next = NULL;
 	return (head);
 }
-/*
-void	ss(t_input_list *input_list)
-{
-	sa(input_list, head, tail);
-	sb(input_list);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 09:06:29 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 11:50:11 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/19 12:07:37 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ stack_n		*list_in(stack_n *head, t_input_list *input_list)
 
 	int n = 0;
 	tmp = create_new_node(input_list->number_list[n]);
-	head = tmp; // head contiene la posicion del nuevo nodo
+	head = tmp; 													//head contiene la posicion del nuevo nodo
 	tmp->prev = NULL;
 	n++;
 	while(n < input_list->n_numbers)
@@ -59,7 +59,7 @@ stack_n		*list_in(stack_n *head, t_input_list *input_list)
 	return (head);
 }
 
-stack_n		*find_node(stack_n *head, int number)	// encuentra la posicion del valor que introduces y retoran la posicion en la que se encuentra en la lista
+stack_n		*find_node(stack_n *head, int number)					//encuentra la posicion del valor que introduces y retoran la posicion en la que se encuentra en la lista
 {
 	stack_n	*tmp = head;
 	while (tmp != NULL)
@@ -71,7 +71,7 @@ stack_n		*find_node(stack_n *head, int number)	// encuentra la posicion del valo
 	return NULL;
 }
 
-stack_n		*position_node(stack_n *head, int position)	// encuentra el nodo con la posicion que indicas(el 3 numero de la lista, te retornara la posicion en memoria del 3er numero)
+stack_n		*position_node(stack_n *head, int position)				//encuentra el nodo con la posicion que indicas(el 3 numero de la lista, te retornara la posicion en memoria del 3er numero)
 {
 	stack_n	*tmp = head;
 	int count;

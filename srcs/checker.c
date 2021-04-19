@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:21:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 11:37:06 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/19 13:28:11 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void read_instructions(t_input_list *input_list)
 	{
 		if (!ft_strcmp(input_list->instructions, ""))
 			break ;
-		//printf("|| %s ||\n", input_list->instructions);
 		filtr_instr(input_list);
 		free(input_list->instructions);
 	}
@@ -33,7 +32,7 @@ int			main (int argc, char ** argv)
 	
 	check_arg(argc, argv, &input_list);
 	input_list.a = list_in(input_list.a, &input_list);		//retornar la posicion mamahuevo por eso hay que guardarlo en head
-	//input_list.b = list_in(input_list.b, &input_list);
+	input_list.b = list_in(input_list.b, &input_list);
 	read_instructions(&input_list);
 	///////print_stack(input_list.a);
 	///////input_list.a = sa_sb(input_list.a, position_node(input_list.a, 1), position_node(input_list.a, 2), 1);
@@ -42,8 +41,8 @@ int			main (int argc, char ** argv)
 	//-->free del stack a y b<--//
 
 	/////////////////////////////////
-	//printf("\n\n\n\n-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/\n\n\n\n");
-	//system("leaks checker");
+	printf("\n\n\n\n-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/\n\n\n\n");
+	system("leaks checker");
 	/////////////////////////////////
 	return (0);
 }

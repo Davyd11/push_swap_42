@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 10:22:55 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 11:41:35 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/19 13:27:15 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,26 @@ int		filtr_instr(t_input_list *input_list)
 	}
 	else if (ft_strcmp(input_list->instructions, "pa") == 0)
 		pa(input_list);
-	/*else if (ft_strcmp(input_list->instructions, "pb") == 0)
+	else if (ft_strcmp(input_list->instructions, "pb") == 0)
+		pb(input_list);
 	else if (ft_strcmp(input_list->instructions, "ra") == 0)
+		ra(input_list);
 	else if (ft_strcmp(input_list->instructions, "rb") == 0)
+		rb(input_list);
 	else if (ft_strcmp(input_list->instructions, "rr") == 0)
+	{
+		ra(input_list);
+		rb(input_list);
+	}
 	else if (ft_strcmp(input_list->instructions, "rra") == 0)
+		rra(input_list);
 	else if (ft_strcmp(input_list->instructions, "rrb") == 0)
-	else if (ft_strcmp(input_list->instructions, "rrr") == 0)*/
+		rrb(input_list);
+	else if (ft_strcmp(input_list->instructions, "rrr") == 0)
+	{
+		rra(input_list);
+		rrb(input_list);
+	}
 	else
 		return(0);
 	print_stack(input_list);
