@@ -6,14 +6,16 @@
 #    By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/31 13:02:36 by dpuente-          #+#    #+#              #
-#    Updated: 2021/04/16 09:42:47 by dpuente-         ###   ########.fr        #
+#    Updated: 2021/04/19 10:33:26 by dpuente-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS_CHECK				=	srcs/checker.c \
 							check/initialize_checker.c check/error_display.c check/operations1.c \
-							check/operations2.c \
-							utils/libft/ft_atoi.c utils/libft/ft_split.c \
+							check/operations2.c check/global_functions.c  check/filtr_instr.c \
+							utils/libft/ft_atoi.c utils/libft/ft_split.c utils/libft/ft_strcmp.c \
+							utils/libft/ft_substr.c \
+							utils/gnl/get_next_line.c utils/gnl/get_next_line_utils.c \
 
 SRCS_PUSH				=	srcs/push_swap.c \
 

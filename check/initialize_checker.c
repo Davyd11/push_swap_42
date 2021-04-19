@@ -6,11 +6,20 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:50:11 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/16 09:24:34 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/19 09:11:16 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+stack_n	*create_new_node(int val)
+{
+	stack_n *current = malloc(sizeof(stack_n));
+	current->prev = NULL;
+	current->val = val;
+	current->next = NULL;
+	return current;
+}
 
 void	int_list(t_input_list *input_list, char **argv, int argc)
 {
@@ -31,15 +40,6 @@ void	int_list(t_input_list *input_list, char **argv, int argc)
 		count_argv++;
 		count_struct++;
 	}
-}
-
-stack_n	*create_new_node(int val)
-{
-	stack_n *current = malloc(sizeof(stack_n));
-	current->prev = NULL;
-	current->val = val;
-	current->next = NULL;
-	return current;
 }
 
 void	check_arg(int argc, char **argv, t_input_list *input_list)

@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 13:45:08 by davyd11           #+#    #+#             */
-/*   Updated: 2021/01/11 12:13:52 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/19 09:49:44 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ size_t			ft_strlcpy(char *dest, const char *src, size_t size);
 int				ft_strlen(const char *str);
 
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
+
+int				ft_strcmp(const char *s1, const char *s2);
 
 char			*ft_strnstr(const char *str, const char *to_find, size_t len);
 

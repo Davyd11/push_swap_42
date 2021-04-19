@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 19:25:09 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/16 13:08:21 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/19 11:36:34 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		n_nodes(stack_n *head)
 	return (nodes);
 }
 
-stack_n		*sa_sb(stack_n *head, stack_n *first, stack_n *second, int stack)
+stack_n		*sa_sb(stack_n *head, stack_n *first, stack_n *second)
 {
 
 	stack_n *tmp;
@@ -45,10 +45,6 @@ stack_n		*sa_sb(stack_n *head, stack_n *first, stack_n *second, int stack)
     second->prev = tmp;
     if (first == head)
         head = second;
-	if (stack == 1)
-		write (1, "sa\n", 3);///////////////////////////
-	else if (stack == 2)
-		write (1, "sb\n", 3);
 	return (head);
 }
 
@@ -56,6 +52,7 @@ int		pa(t_input_list *input_list)
 {
 	stack_n *tmp;
 
+	printf("%d", n_nodes(input_list->b));
 	if (n_nodes(input_list->b) <= 1)
 		return (0);
 	tmp = input_list->a;
@@ -95,6 +92,7 @@ stack_n	*ra_rb(stack_n *head)
 	tail->next = tmp;
 	tail = tmp;
 	tail->next = NULL;
+	return (head);
 }
 /*
 void	ss(t_input_list *input_list)

@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/16 10:20:44 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/19 11:49:03 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "utils/libft/libft.h"
+#include "utils/gnl/get_next_line.h"
 
 typedef struct	node
 {
@@ -27,6 +28,7 @@ typedef struct	s_input_list
 	int			n_numbers;						//number of arguments input
 	int			*number_list;					//the list of numbers
 	int			string;
+	char		*instructions;
 	stack_n		*a;
 	stack_n		*b;
 
@@ -37,8 +39,14 @@ void	int_list(t_input_list *input_list, char **argv, int argc);				//initialize_
 void 	check_arg(int argc, char **argv, t_input_list *input_list);				//initialize_checker.c
 void 	arg_num(char **argv);													//error_display.c
 int		checker(t_input_list *input_list);										//checker.c
+int		n_nodes(stack_n *head);													//operations1.c
+void	print_stack(t_input_list *input_list);									//global_functions.c
+int		filtr_instr(t_input_list * input_list);									//filtr_instr.c
+int		pa(t_input_list *input_list);
 stack_n	*create_new_node(int val);												//checker.c
-stack_n	*find_node(stack_n *head, int number);									//checker.c
+stack_n	*find_node(stack_n *head, int number);									//global_functions.c
+stack_n	*list_in(stack_n *head, t_input_list *input_list);						//global_functions.c
+stack_n	*position_node(stack_n *head, int position);							//global_functions.c
 //OPERATIONS
-stack_n	*sa_sb(stack_n *head, stack_n *first, stack_n *second, int stack);					//operations1.c
+stack_n	*sa_sb(stack_n *head, stack_n *first, stack_n *second);					//operations1.c
 
