@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 13:26:47 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/21 09:01:40 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "utils/libft/libft.h"
-#include "utils/gnl/get_next_line.h"
+#include "utils/get_next_line/get_next_line.h"
 
 typedef struct	node
 {
