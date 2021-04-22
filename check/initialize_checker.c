@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:50:11 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 09:11:16 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/22 12:04:29 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,24 @@ stack_n	*create_new_node(int val)
 	current->val = val;
 	current->next = NULL;
 	return current;
+}
+
+stack_n		*list_in_b(stack_n *head, t_input_list *input_list)
+{
+	stack_n			*tmp;
+
+	int n = 0;
+	tmp = create_new_node(0);
+	head = tmp; 													//head contiene la posicion del nuevo nodo
+	tmp->prev = NULL;
+	n++;
+	while(n < input_list->n_numbers)
+	{
+		tmp->next = create_new_node(0);
+		tmp = tmp->next;
+		n++;
+	}
+	return (head);
 }
 
 void	int_list(t_input_list *input_list, char **argv, int argc)
@@ -47,9 +65,11 @@ void	check_arg(int argc, char **argv, t_input_list *input_list)
 	int numbers;
 	
 	numbers = 0;
+	
 	if (argc == 2)
 	{
 		argv = ft_split(argv[1], ' '); //guardar el contenido de split en un doble puntero
+		arg_num(argv);
 		while (argv[numbers] != NULL)
 			numbers++;
 		argc = numbers + 1;

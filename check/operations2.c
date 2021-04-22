@@ -6,19 +6,18 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 10:00:31 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 13:26:34 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/19 13:32:54 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-
-int		ra(t_input_list *input_list)
+int	ra(t_input_list *input_list)
 {
-	stack_n *tmp;
-	stack_n *loop_tmp;
+	stack_n	*tmp;
+	stack_n	*loop_tmp;
 
-	if(n_nodes(input_list->a) <= 1)
+	if (n_nodes(input_list->a) <= 1)
 		return (0);
 	tmp = input_list->a;
 	loop_tmp = input_list->a;
@@ -30,12 +29,12 @@ int		ra(t_input_list *input_list)
 	return (0);
 }
 
-int		rb(t_input_list *input_list)
+int	rb(t_input_list *input_list)
 {
-	stack_n *tmp;
-	stack_n *loop_tmp;
+	stack_n	*tmp;
+	stack_n	*loop_tmp;
 
-	if(n_nodes(input_list->b) <= 1)
+	if (n_nodes(input_list->b) <= 1)
 		return (0);
 	tmp = input_list->b;
 	loop_tmp = input_list->b;
@@ -47,13 +46,13 @@ int		rb(t_input_list *input_list)
 	return (0);
 }
 
-int		rra(t_input_list *input_list)
+int	rra(t_input_list *input_list)
 {
-	stack_n *tmp;
-	stack_n *nulo;
-	stack_n *loop_tmp;
+	stack_n	*tmp;
+	stack_n	*nulo;
+	stack_n	*loop_tmp;
 
-	if(n_nodes(input_list->a) <= 1)
+	if (n_nodes(input_list->a) <= 1)
 		return (0);
 	tmp = input_list->a;
 	loop_tmp = input_list->a;
@@ -69,13 +68,13 @@ int		rra(t_input_list *input_list)
 	return (0);
 }
 
-int		rrb(t_input_list *input_list)
+int	rrb(t_input_list *input_list)
 {
-	stack_n *tmp;
-	stack_n *nulo;
-	stack_n *loop_tmp;
+	stack_n	*tmp;
+	stack_n	*nulo;
+	stack_n	*loop_tmp;
 
-	if(n_nodes(input_list->b) <= 1)
+	if (n_nodes(input_list->b) <= 1)
 		return (0);
 	tmp = input_list->b;
 	loop_tmp = input_list->b;

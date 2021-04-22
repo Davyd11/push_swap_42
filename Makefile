@@ -6,7 +6,7 @@
 #    By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/31 13:02:36 by dpuente-          #+#    #+#              #
-#    Updated: 2021/04/19 10:33:26 by dpuente-         ###   ########.fr        #
+#    Updated: 2021/04/22 11:56:55 by dpuente-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,11 @@ SRCS_CHECK				=	srcs/checker.c \
 							utils/gnl/get_next_line.c utils/gnl/get_next_line_utils.c \
 
 SRCS_PUSH				=	srcs/push_swap.c \
+							check/initialize_checker.c check/error_display.c check/operations1.c \
+							check/operations2.c check/global_functions.c  check/filtr_instr.c \
+							utils/libft/ft_atoi.c utils/libft/ft_split.c utils/libft/ft_strcmp.c \
+							utils/libft/ft_substr.c \
+							utils/gnl/get_next_line.c utils/gnl/get_next_line_utils.c \
 
 
 OBJS_C					=	$(SRCS_CHECK:.c=.o)
@@ -47,7 +52,7 @@ normi:
 						norminette $(SRCS_CHECK) $(SRCS_PUSH)
 
 run:					
-						./checker 9 5 1 7 8 4 11 12 10 33 234 334
+						./push_swap 9 5 1 7 8 4 11 12 10 33 23 3
 
 re:						fclean all
 

@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 13:26:47 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/22 11:11:48 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ typedef struct	node
 typedef struct	s_input_list
 {
 	int			n_numbers;						//number of arguments input
-	int			*number_list;					//the list of numbers
+	int			media_a;
+	int			media_b;
 	int			string;
+	int			*number_list;					//the list of numbers
 	char		*instructions;
 	stack_n		*a;
 	stack_n		*b;
@@ -51,6 +53,7 @@ int		rrb(t_input_list *input_list);											//operations2.c
 stack_n	*create_new_node(int val);												//checker.c
 stack_n	*find_node(stack_n *head, int number);									//global_functions.c
 stack_n	*list_in(stack_n *head, t_input_list *input_list);						//global_functions.c
+stack_n	*list_in_b(stack_n *head, t_input_list *input_list);					//global_functions.c
 stack_n	*position_node(stack_n *head, int position);							//global_functions.c
 //OPERATIONS
 stack_n	*sa_sb(stack_n *head, stack_n *first, stack_n *second);					//operations1.c
