@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 11:20:09 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/23 11:20:42 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/23 13:54:48 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ void	divide_f(t_input_list *input_list)
 	while (n < input_list->n_numbers)
 	{
 		if (input_list->a->val > input_list->media_a)
+		{
 			pb(input_list);
+		}
+			
 		else
 			ra(input_list);
 		n++;

@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/23 12:51:27 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/23 13:43:01 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ void	print_stack(t_input_list *input_list);									//global_functions.c
 int		filtr_instr(t_input_list * input_list);									//filtr_instr.c
 //////////////////////////////////////
 void	divide_f(t_input_list *input_list);										//push_utils1.c
-void 	bucle_a(t_input_list *input_list);										//push_utils2.c
+int 	bucle_a(t_input_list *input_list);										//push_utils2.c
+void	back_to_a(t_input_list *input_list);
 void 	bucle_b(t_input_list *input_list);										//push_utils2.c
 int		media(t_input_list *input_list, stack_n *head);							//push_utils1.c
 int		smaller(stack_n *head);													//push_utils1.c

@@ -6,13 +6,13 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 11:24:50 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/23 12:35:36 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/23 13:46:31 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	bucle_a(t_input_list *input_list)
+int	bucle_a(t_input_list *input_list)
 {
 	int	option;
 	int	total_nodes;
@@ -40,6 +40,13 @@ void	bucle_a(t_input_list *input_list)
 		pb(input_list);
 		n++;
 	}
+	return (n);
+}
+
+void back_to_a(t_input_list *input_list)
+{
+	while (n_nodes(input_list->b) > 0)
+		pa(input_list);
 }
 
 void	bucle_b(t_input_list *input_list)
