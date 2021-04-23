@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 10:22:55 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 13:27:15 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/23 12:48:40 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 int		filtr_instr(t_input_list *input_list)
 {
 	if (ft_strcmp(input_list->instructions, "sa") == 0)
-		input_list->a = sa_sb(input_list->a, position_node(input_list->a, 1), position_node(input_list->a, 2));
+		input_list->a = sa_sb(input_list->a, position_node(input_list->a, 1), position_node(input_list->a, 2), 1);
 	else if (ft_strcmp(input_list->instructions, "sb") == 0)
-		input_list->b = sa_sb(input_list->b, position_node(input_list->b, 1), position_node(input_list->b, 2));
+		input_list->b = sa_sb(input_list->b, position_node(input_list->b, 1), position_node(input_list->b, 2), 2);
 	else if (ft_strcmp(input_list->instructions, "ss") == 0)
 	{
-		input_list->a = sa_sb(input_list->a, position_node(input_list->a, 1), position_node(input_list->a, 2));
-		input_list->b = sa_sb(input_list->b, position_node(input_list->b, 1), position_node(input_list->b, 2));
+		input_list->a = sa_sb(input_list->a, position_node(input_list->a, 1), position_node(input_list->a, 2), 1);
+		input_list->b = sa_sb(input_list->b, position_node(input_list->b, 1), position_node(input_list->b, 2), 2);
 	}
 	else if (ft_strcmp(input_list->instructions, "pa") == 0)
 		pa(input_list);

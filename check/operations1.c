@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 19:25:09 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/22 11:27:39 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/23 12:50:41 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	n_nodes(stack_n *head)
 	return (nodes);
 }
 
-stack_n	*sa_sb(stack_n *head, stack_n *first, stack_n *second)
+stack_n	*sa_sb(stack_n *head, stack_n *first, stack_n *second, int op)
 {
 	stack_n	*tmp;
 
@@ -41,6 +41,10 @@ stack_n	*sa_sb(stack_n *head, stack_n *first, stack_n *second)
 	second->prev = tmp;
 	if (first == head)
 		head = second;
+	if (op == 1)
+		write(1 ,"sa\n", 3);
+	else if (op == 2)
+		write(1 ,"sb\n", 3);
 	return (head);
 }
 
@@ -63,6 +67,7 @@ int	pa(t_input_list *input_list)
 		input_list->b = input_list->b->next;
 		input_list->a->next = tmp;
 	}
+	write(1 ,"pa\n", 3);
 	return (1);
 }
 
@@ -85,10 +90,11 @@ int	pb(t_input_list *input_list)
 		input_list->a = input_list->a->next;
 		input_list->b->next = tmp;
 	}
+	write(1 ,"pb\n", 3);
 	return (1);
 }
-
-stack_n	*ra_rb(stack_n *head)
+/*
+stack_n	*ra_rb(stack_n *head, int op)
 {
 	stack_n	*tmp;
 	stack_n	*tail;
@@ -101,5 +107,9 @@ stack_n	*ra_rb(stack_n *head)
 	tail->next = tmp;
 	tail = tmp;
 	tail->next = NULL;
+	if (op == 1)
+		write(1 ,"ra\n", 3);
+	else if (op == 2)
+		write(1 ,"rb\n", 3);
 	return (head);
-}
+}*/

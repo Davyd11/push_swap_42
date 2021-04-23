@@ -6,11 +6,7 @@
 #    By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/31 13:02:36 by dpuente-          #+#    #+#              #
-<<<<<<< HEAD
-#    Updated: 2021/04/22 11:56:55 by dpuente-         ###   ########.fr        #
-=======
-#    Updated: 2021/04/21 09:00:47 by dpuente-         ###   ########.fr        #
->>>>>>> 3f41f7dcba23ecfa45335b659c7be15b6ce22180
+#    Updated: 2021/04/23 11:29:37 by dpuente-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +15,13 @@ SRCS_CHECK				=	srcs/checker.c \
 							check/operations2.c check/global_functions.c  check/filtr_instr.c \
 							utils/libft/ft_atoi.c utils/libft/ft_split.c utils/libft/ft_strcmp.c \
 							utils/libft/ft_substr.c \
-							utils/get_next_line/get_next_line.c utils/get_next_line/get_next_line_utils.c \
+							utils/gnl/get_next_line.c utils/gnl/get_next_line_utils.c \
 
 SRCS_PUSH				=	srcs/push_swap.c \
 							check/initialize_checker.c check/error_display.c check/operations1.c \
 							check/operations2.c check/global_functions.c  check/filtr_instr.c \
 							utils/libft/ft_atoi.c utils/libft/ft_split.c utils/libft/ft_strcmp.c \
+							push/push_utils1.c push/push_utils2.c  \
 							utils/libft/ft_substr.c \
 							utils/gnl/get_next_line.c utils/gnl/get_next_line_utils.c \
 
@@ -56,11 +53,8 @@ normi:
 						norminette $(SRCS_CHECK) $(SRCS_PUSH)
 
 run:					
-<<<<<<< HEAD
-						./push_swap 9 5 1 7 8 4 11 12 10 33 23 3
-=======
-						./push_swap 5 1 6 4 2 3
->>>>>>> 3f41f7dcba23ecfa45335b659c7be15b6ce22180
+						ARG=$(ruby -e "puts (0..100).to_a.shuffle.join(' ')");  ./push_swap $ARG
+						#ARG=$(ruby -e "puts (0..100).to_a.shuffle.join(' ')");  ./push_swap $ARG | ./checker $ARG
 
 re:						fclean all
 

@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 10:00:31 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 13:32:54 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/23 12:43:17 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	ra(t_input_list *input_list)
 		loop_tmp = loop_tmp->next;
 	loop_tmp->next = tmp;
 	tmp->next = NULL;
+	write(1 ,"ra\n", 3);
 	return (0);
 }
 
@@ -43,6 +44,7 @@ int	rb(t_input_list *input_list)
 		loop_tmp = loop_tmp->next;
 	loop_tmp->next = tmp;
 	tmp->next = NULL;
+	write(1 ,"rb\n", 3);
 	return (0);
 }
 
@@ -65,6 +67,7 @@ int	rra(t_input_list *input_list)
 	input_list->a = loop_tmp;
 	input_list->a->next = tmp;
 	nulo->next = NULL;
+	write(1 ,"rra\n", 4);
 	return (0);
 }
 
@@ -87,5 +90,6 @@ int	rrb(t_input_list *input_list)
 	input_list->b = loop_tmp;
 	input_list->b->next = tmp;
 	nulo->next = NULL;
+	write(1 ,"rrb\n", 4);
 	return (0);
 }
