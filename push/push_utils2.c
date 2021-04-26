@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 11:24:50 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/23 13:46:31 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/26 13:09:13 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,24 @@ int	bucle_a(t_input_list *input_list)
 	return (n);
 }
 
-void back_to_a(t_input_list *input_list)
+void order(t_input_list *input_list)
 {
-	while (n_nodes(input_list->b) > 0)
-		pa(input_list);
+	int n_position;
+	int option;
+	int total_nodes;
+
+	total_nodes = n_nodes(input_list->a);
+	option = 2;
+	n_position = smaller(input_list->a);
+	if (n_position < total_nodes / 2)
+			option = 1;
+	while (smaller(input_list->a) != 1)
+	{
+		if (option == 1)
+			ra(input_list);
+		else
+			rra(input_list);
+	}
 }
 
 void	bucle_b(t_input_list *input_list)
@@ -62,7 +76,7 @@ void	bucle_b(t_input_list *input_list)
 	{
 		total_nodes = n_nodes(input_list->b);
 		n_position = greater(input_list->b);
-		if (n_position > total_nodes / 2)
+		if (n_position < total_nodes / 2)
 			option = 1;
 		else
 			option = 2;
