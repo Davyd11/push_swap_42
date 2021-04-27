@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 18:43:33 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/22 10:35:48 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/27 21:10:01 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ void	repeat(char **argv)
 		x = 1;
 		while (argv[x] != NULL)
 		{
-	//		printf("--%s--%s--\n++%d++%d++\n", argv[n], argv[x], n, x);
-			if (argv[n] == argv[x] && n != x)
+			if (ft_strcmp(argv[n], argv[x]) == 0 && (n != x))
 			{
 				write(1, "Error\n", 7);
 				exit(0);
@@ -41,12 +40,12 @@ void	arg_num(char **argv)//falta hacer la comprovacion de numeros repetidos
 
 	y = 0;
 	x = 1;
-	//repeat (argv);					// no funciona no se porque 
+	repeat (argv);					// no funciona no se porque 
 	while (argv[x] != NULL)
 	{
 		while (argv[x][y] != '\0')
 		{
-			if (argv[x][y] < 48 || argv[x][y] > 57)
+			if ((argv[x][y] < 48 || argv[x][y] > 57) && (argv[x][y] != 45))
 			{
 				write(1, "Error\n", 7);
 				exit(0);

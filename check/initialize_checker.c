@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:50:11 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/27 13:53:20 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/27 21:11:49 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,16 +70,18 @@ void	check_arg(int argc, char **argv, t_input_list *input_list)
 	if (argc == 2)
 	{
 		argv = ft_split(argv[1], ' '); //guardar el contenido de split en un doble puntero
-		arg_num(argv);
 		while (argv[numbers] != NULL)
 			numbers++;
 		argc = numbers + 1;
 		input_list->string = 1;	// guarda en la structura que los argumentos vienen de un string dividido
+		arg_num(argv);
 	}
 	else if (argc == 1)
 	{
 		write (1,"Error\n", 5);
 		exit(0);
 	}
+	else
+		arg_num(argv);
 	int_list(input_list, argv, argc);
 }
