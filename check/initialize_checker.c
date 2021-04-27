@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:50:11 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/22 12:04:29 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/27 13:53:20 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,13 @@ void	int_list(t_input_list *input_list, char **argv, int argc)
 
 	input_list->n_numbers = argc - 1;
 	input_list->number_list = (int *)malloc(sizeof(int) * input_list->n_numbers);
-	
-	if (input_list->string == 1) // si viene de una string dividida que empiece desde la posicion 0
+	if (input_list->string == 1)
 		count_argv = 0;
 	while(argv[count_argv] != NULL)
 	{
 		input_list->number_list[count_struct] = ft_atoi(argv[count_argv]);
+		if (input_list->string == 1)
+			free(argv[count_argv]);/// si lo livero me da error en argumentos sin comillas
 		count_argv++;
 		count_struct++;
 	}

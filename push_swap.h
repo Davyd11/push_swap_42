@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/27 10:38:37 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/27 12:12:37 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void 	arg_num(char **argv);													//error_display.c
 int		checker(t_input_list *input_list);										//checker.c
 int		n_nodes(stack_n *head);													//operations1.c
 void	print_stack(t_input_list *input_list);									//global_functions.c
-int		filtr_instr(t_input_list * input_list);									//filtr_instr.c
+int		filtr_instr(t_input_list *input_list);									//filtr_instr.c
+void	free_lists(t_input_list *input_list);
 //////////////////////////////////////
 void	divide_to_b(t_input_list *input_list, int media_botton, int media_top);	//push_utils1.c
 int 	bucle_a(t_input_list *input_list);										//push_utils2.c

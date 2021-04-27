@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:21:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/22 11:17:33 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/27 13:04:21 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void read_instructions(t_input_list *input_list)
 		if (!ft_strcmp(input_list->instructions, ""))
 			break ;
 		filtr_instr(input_list);
-		free(input_list->instructions);
+		//free(input_list->instructions);
 	}
 }
 

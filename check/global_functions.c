@@ -6,13 +6,13 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 09:06:29 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/19 12:07:37 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/27 13:28:56 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void		print_stack(t_input_list *input_list) // llama al principio de la lista ?
+void		print_stack(t_input_list *input_list)
 {
 	stack_n *current_a = input_list->a;
 	stack_n *current_b = input_list->b;
@@ -56,6 +56,7 @@ stack_n		*list_in(stack_n *head, t_input_list *input_list)
 		tmp = tmp->next;
 		n++;
 	}
+	//free(input_list->number_list);
 	return (head);
 }
 
@@ -82,6 +83,5 @@ stack_n		*position_node(stack_n *head, int position)				//encuentra el nodo con 
 		count++;
 		tmp = tmp->next;
 	}
-
 	return (tmp);
 }
