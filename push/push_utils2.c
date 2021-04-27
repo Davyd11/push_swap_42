@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 11:24:50 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/26 13:09:13 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/27 10:26:10 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int	bucle_a(t_input_list *input_list)
 		while (num != input_list->a->val)
 		{
 			if (option == 1)
-				ra(input_list);
+				ra(input_list, 1);
 			else
-				rra(input_list);
+				rra(input_list, 1);
 		}
 		pb(input_list);
 		n++;
@@ -57,9 +57,9 @@ void order(t_input_list *input_list)
 	while (smaller(input_list->a) != 1)
 	{
 		if (option == 1)
-			ra(input_list);
+			ra(input_list, 1);
 		else
-			rra(input_list);
+			rra(input_list, 1);
 	}
 }
 
@@ -84,9 +84,9 @@ void	bucle_b(t_input_list *input_list)
 		while (num != input_list->b->val)
 		{
 			if (option == 1)
-				rb(input_list);
+				rb(input_list, 1);
 			else
-				rrb(input_list);
+				rrb(input_list, 1);
 		}
 		pa(input_list);
 		n++;

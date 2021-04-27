@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 19:25:09 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/23 12:50:41 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/27 10:24:16 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,23 +93,3 @@ int	pb(t_input_list *input_list)
 	write(1 ,"pb\n", 3);
 	return (1);
 }
-/*
-stack_n	*ra_rb(stack_n *head, int op)
-{
-	stack_n	*tmp;
-	stack_n	*tail;
-	int		n;
-
-	n = n_nodes(head);
-	tail = find_node(head, n);
-	tmp = head;
-	head = head->next;
-	tail->next = tmp;
-	tail = tmp;
-	tail->next = NULL;
-	if (op == 1)
-		write(1 ,"ra\n", 3);
-	else if (op == 2)
-		write(1 ,"rb\n", 3);
-	return (head);
-}*/

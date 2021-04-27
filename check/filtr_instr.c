@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 10:22:55 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/23 12:48:40 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/27 10:37:23 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,35 +18,28 @@ int		filtr_instr(t_input_list *input_list)
 		input_list->a = sa_sb(input_list->a, position_node(input_list->a, 1), position_node(input_list->a, 2), 1);
 	else if (ft_strcmp(input_list->instructions, "sb") == 0)
 		input_list->b = sa_sb(input_list->b, position_node(input_list->b, 1), position_node(input_list->b, 2), 2);
-	else if (ft_strcmp(input_list->instructions, "ss") == 0)
-	{
-		input_list->a = sa_sb(input_list->a, position_node(input_list->a, 1), position_node(input_list->a, 2), 1);
-		input_list->b = sa_sb(input_list->b, position_node(input_list->b, 1), position_node(input_list->b, 2), 2);
+	else if (ft_strcmp(input_list->instructions, "ss") == 0){
+		ss(input_list);
 	}
 	else if (ft_strcmp(input_list->instructions, "pa") == 0)
 		pa(input_list);
 	else if (ft_strcmp(input_list->instructions, "pb") == 0)
 		pb(input_list);
 	else if (ft_strcmp(input_list->instructions, "ra") == 0)
-		ra(input_list);
+		ra(input_list, 1);
 	else if (ft_strcmp(input_list->instructions, "rb") == 0)
-		rb(input_list);
-	else if (ft_strcmp(input_list->instructions, "rr") == 0)
-	{
-		ra(input_list);
-		rb(input_list);
+		rb(input_list, 1);
+	else if (ft_strcmp(input_list->instructions, "rr") == 0){
+		rr(input_list);
 	}
 	else if (ft_strcmp(input_list->instructions, "rra") == 0)
-		rra(input_list);
+		rra(input_list, 1);
 	else if (ft_strcmp(input_list->instructions, "rrb") == 0)
-		rrb(input_list);
-	else if (ft_strcmp(input_list->instructions, "rrr") == 0)
-	{
-		rra(input_list);
-		rrb(input_list);
+		rrb(input_list, 1);
+	else if (ft_strcmp(input_list->instructions, "rrr") == 0){
+		rrr(input_list);
 	}
 	else
 		return(0);
-	print_stack(input_list);
 	return(0);
 }

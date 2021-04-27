@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/26 12:19:10 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/27 10:38:37 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,12 @@ stack_n	*list_in_b(stack_n *head, t_input_list *input_list);					//global_functi
 stack_n	*position_node(stack_n *head, int position);							//global_functions.c
 //OPERATIONS
 stack_n	*sa_sb(stack_n *head, stack_n *first, stack_n *second, int op);			//operations1.c
+void	ss(t_input_list *input_list);											//operations3.c
 int		pa(t_input_list *input_list);											//operations1.c
 int		pb(t_input_list *input_list);											//operations1.c
-int		ra(t_input_list *input_list);											//operations2.c
-int		rb(t_input_list *input_list);											//operations2.c
-int		rra(t_input_list *input_list);											//operations2.c
-int		rrb(t_input_list *input_list);											//operations2.c
+int		ra(t_input_list *input_list, int opt);									//operations2.c
+int		rb(t_input_list *input_list, int opt);									//operations2.c
+void	rr(t_input_list *input_list);											//operations3.c
+int		rra(t_input_list *input_list, int opt);									//operations2.c
+int		rrb(t_input_list *input_list, int opt);									//operations2.c
+void	rrr(t_input_list *input_list);											//operations3.c
