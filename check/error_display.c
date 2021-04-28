@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 18:43:33 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/27 21:10:01 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/28 10:04:35 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	repeat(char **argv)
 {
-	int n;
-	int x;
+	int	n;
+	int	x;
 
 	n = 1;
 	while (argv[n] != NULL)
@@ -33,14 +33,15 @@ void	repeat(char **argv)
 		n++;
 	}
 }
-void	arg_num(char **argv)//falta hacer la comprovacion de numeros repetidos
+
+void	arg_num(char **argv)
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 
 	y = 0;
 	x = 1;
-	repeat (argv);					// no funciona no se porque 
+	repeat (argv);
 	while (argv[x] != NULL)
 	{
 		while (argv[x][y] != '\0')

@@ -6,23 +6,25 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 10:32:48 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/22 13:58:57 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/28 11:22:41 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-void			ft_strdel(char **as)
+void	ft_strdel(char **as)
 {
 	if (as != NULL && *as != NULL)
+	{
 		if (as != NULL)
 		{
 			free(*as);
 			*as = NULL;
 		}
+	}
 }
 
-char			*ft_strnew(size_t size)
+char	*ft_strnew(size_t size)
 {
 	char	*str;
 	size_t	i;
@@ -39,7 +41,7 @@ char			*ft_strnew(size_t size)
 	return (str);
 }
 
-static int		readline(char **ch, char **line, int fd)
+static int	readline(char **ch, char **line, int fd)
 {
 	int		len;
 	char	*aux;
@@ -54,7 +56,7 @@ static int		readline(char **ch, char **line, int fd)
 	return (1);
 }
 
-static int		output(char **ch, char **line, int ret, int fd)
+static int	output(char **ch, char **line, int ret, int fd)
 {
 	if (ret < 0)
 		return (-1);
@@ -74,15 +76,14 @@ static int		output(char **ch, char **line, int ret, int fd)
 	}
 }
 
-int				get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	char		*tmp;
 	static char	*ch[4096];
 	int			ret;
 	char		*buff;
 
-	if (fd < 0 || line == NULL || BUFF_SIZE < 1 ||
-		(!(buff = (char *)malloc(sizeof(char) * BUFF_SIZE + 1))))
+	if (fd < 0 || line == NULL || BUFF_SIZE < 1 || (!(buff = (char *)malloc(sizeof(char) * BUFF_SIZE + 1))))
 		return (-1);
 	while ((ret = read(fd, buff, BUFF_SIZE)) > 0)
 	{

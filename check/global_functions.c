@@ -6,24 +6,27 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 09:06:29 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/27 13:28:56 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/28 12:39:18 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void		print_stack(t_input_list *input_list)
+void	print_stack(t_input_list *input_list)
 {
-	stack_n *current_a = input_list->a;
-	stack_n *current_b = input_list->b;
-	int na = n_nodes(input_list->a);
-	int nb = n_nodes(input_list->b);
-	int loops;
+	t_stack_n	*current_a;
+	t_stack_n	*current_b;
+	int			na;
+	int			nb;
+	int			loops;
 
+	current_a = input_list->a;
+	current_b = input_list->b;
+	na = n_nodes(input_list->a);
+	nb = n_nodes(input_list->b);
 	loops = 0;
-	
 	printf("\n  A\t  B\n-----\t-----\n");
-	while(current_a != NULL || current_b != NULL)
+	while (current_a != NULL || current_b != NULL)
 	{
 		if (loops < na)
 		{
@@ -41,42 +44,45 @@ void		print_stack(t_input_list *input_list)
 	printf("-----\t-----\n");
 }
 
-stack_n		*list_in(stack_n *head, t_input_list *input_list)
+t_stack_n	*list_in(t_stack_n *head, t_input_list *input_list)
 {
-	stack_n			*tmp;
+	t_stack_n	*tmp;
+	int			n;
 
-	int n = 0;
+	n = 0;
 	tmp = create_new_node(input_list->number_list[n]);
-	head = tmp; 													//head contiene la posicion del nuevo nodo
+	head = tmp;
 	tmp->prev = NULL;
 	n++;
-	while(n < input_list->n_numbers)
+	while (n < input_list->n_numbers)
 	{
 		tmp->next = create_new_node(input_list->number_list[n]);
 		tmp = tmp->next;
 		n++;
 	}
-	//free(input_list->number_list);
 	return (head);
 }
 
-stack_n		*find_node(stack_n *head, int number)					//encuentra la posicion del valor que introduces y retoran la posicion en la que se encuentra en la lista
+t_stack_n	*find_node(t_stack_n *head, int number)
 {
-	stack_n	*tmp = head;
+	t_stack_n	*tmp;
+
+	tmp = head;
 	while (tmp != NULL)
 	{
 		if (tmp->val == number)
-			return tmp;
+			return (tmp);
 		tmp = tmp->next;
 	}
-	return NULL;
+	return (NULL);
 }
 
-stack_n		*position_node(stack_n *head, int position)				//encuentra el nodo con la posicion que indicas(el 3 numero de la lista, te retornara la posicion en memoria del 3er numero)
+t_stack_n	*position_node(t_stack_n *head, int position)
 {
-	stack_n	*tmp = head;
-	int count;
-	
+	t_stack_n	*tmp;
+	int			count;
+
+	tmp = head;
 	count = 1;
 	while (count < position && tmp != NULL)
 	{
