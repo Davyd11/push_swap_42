@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 10:33:28 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 12:54:10 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 14:18:16 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ss(t_input_list *input_list, int program)
 void	free_list_b(t_input_list *input_list)
 {
 	t_stack_n	*tmp;
-	
+
 	while (input_list->b != NULL)
 	{
 		tmp = input_list->b;

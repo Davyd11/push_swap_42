@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 10:22:55 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 13:10:17 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 14:00:19 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,19 @@ void	filtr_next(t_input_list *input_list)
 
 int	filtr_instr(t_input_list *input_list)
 {
+	t_stack_n	*tmp1;
+	t_stack_n	*tmp2;
+	t_stack_n	*tmp3;
+	t_stack_n	*tmp4;
+
+	tmp1 = position_node(input_list->a, 1);
+	tmp2 = position_node(input_list->a, 2);
+	tmp3 = position_node(input_list->b, 1);
+	tmp4 = position_node(input_list->b, 2);
 	if (ft_strcmp(input_list->instructions, "sa") == 0)
-		input_list->a = sa_sb(input_list->a, position_node(input_list->a, 1), position_node(input_list->a, 2), 0);
+		input_list->a = sa_sb(input_list->a, tmp1, tmp2, 0);
 	else if (ft_strcmp(input_list->instructions, "sb") == 0)
-		input_list->b = sa_sb(input_list->b, position_node(input_list->b, 1), position_node(input_list->b, 2), 0);
+		input_list->b = sa_sb(input_list->b, tmp3, tmp4, 0);
 	else if (ft_strcmp(input_list->instructions, "ss") == 0)
 		ss(input_list, 0);
 	else if (ft_strcmp(input_list->instructions, "pa") == 0)

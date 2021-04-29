@@ -6,7 +6,7 @@
 #    By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/31 13:02:36 by dpuente-          #+#    #+#              #
-#    Updated: 2021/04/27 19:44:12 by dpuente-         ###   ########.fr        #
+#    Updated: 2021/04/29 14:17:20 by dpuente-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,8 @@ fclean:					clean
 						$(RM) $(NAME_P) $(NAME_C)
 
 normi:
-						norminette $(SRCS_CHECK) $(SRCS_PUSH)
+						norminette /push/*
+						#push_swap.h
 
 run:					
 						ARG=$(ruby -e "puts (0..100).to_a.shuffle.join(' ')");  ./push_swap $ARG

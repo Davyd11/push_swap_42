@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:21:08 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 13:46:15 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 13:57:41 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	greater_450(t_input_list *input_list)
 {
-	int med_li;
+	int	med_li;
 
 	med_li = media(input_list, input_list->a);
 	divide_to_b(input_list, med_li + ((med_li / 2) + med_li / 4), position_node(input_list->a, greater(input_list->a))->val);
@@ -38,10 +38,10 @@ void	greater_450(t_input_list *input_list)
 
 void	greater_80(t_input_list *input_list)
 {
-	int med_li;
+	int	med_li;
 
 	med_li = media(input_list, input_list->a);
-	divide_to_b(input_list,  med_li + (med_li / 2), position_node(input_list->a, greater(input_list->a))->val);
+	divide_to_b(input_list, med_li + (med_li / 2), position_node(input_list->a, greater(input_list->a))->val);
 	bucle_b(input_list);
 	divide_to_b(input_list, med_li, med_li + (med_li / 2));
 	bucle_b(input_list);
@@ -52,10 +52,10 @@ void	greater_80(t_input_list *input_list)
 	free(input_list->b);
 }
 
-void invertir(t_input_list *input_list)
+void	invertir(t_input_list *input_list)
 {
-	t_stack_n *tmp1;
-	t_stack_n *tmp2;
+	t_stack_n	*tmp1;
+	t_stack_n	*tmp2;
 
 	tmp1 = position_node(input_list->a, 1);
 	tmp2 = position_node(input_list->a, 2);
@@ -66,13 +66,13 @@ void invertir(t_input_list *input_list)
 	}
 }
 
-int		main (int argc, char ** argv)
+int	main (int argc, char **argv)
 {
 	t_input_list	input_list;
+	int				med_li;
+
 	input_list.a = NULL;
 	input_list.b = NULL;
-	int med_li;
-
 	med_li = media(&input_list, input_list.a);
 	check_arg(argc, argv, &input_list);
 	input_list.a = list_in(input_list.a, &input_list);
@@ -95,11 +95,8 @@ int		main (int argc, char ** argv)
 	else if (input_list.n_numbers >= 450)
 		greater_450(&input_list);
 	free(input_list.number_list);
-	//print_stack(&input_list);
-	//free_lists(&input_list);
-	//print_stack(&input_list);
-	/////////////////////////////////
-	//system("leaks push_swap");
-	/////////////////////////////////
 	return (0);
 }
+	/*free_lists(&input_list);
+	print_stack(&input_list);
+	system("leaks push_swap");*/

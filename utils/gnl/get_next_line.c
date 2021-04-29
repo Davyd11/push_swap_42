@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 10:32:48 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 12:11:46 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 14:02:47 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ static int	readline(char **ch, char **line, int fd)
 	aux = ft_strdup(&ch[fd][len + 1]);
 	free(ch[fd]);
 	ch[fd] = aux;
-	//free(aux);///////////////////////////////
 	return (1);
 }
 
@@ -69,9 +68,11 @@ int	get_next_line(int fd, char **line)
 	int			ret;
 	char		*buff;
 
-	if (fd < 0 || line == NULL || BUFF_SIZE < 1 || (!(buff = (char *)malloc(sizeof(char) * BUFF_SIZE + 1))))
+	buff = (char *)malloc(sizeof(char) * BUFF_SIZE + 1);
+	if (fd < 0 || line == NULL || BUFF_SIZE < 1 || (!buff))
 		return (-1);
-	while ((ret = read(fd, buff, BUFF_SIZE)) > 0)
+	ret = read(fd, buff, BUFF_SIZE);
+	while ((ret) > 0)
 	{
 		buff[ret] = '\0';
 		if (ch[fd] == NULL)
@@ -81,12 +82,10 @@ int	get_next_line(int fd, char **line)
 			tmp = ft_strjoin(ch[fd], buff);
 			free(ch[fd]);
 			ch[fd] = tmp;
-			//free(tmp);
 		}
 		if (ft_strchr(ch[fd], '\n'))
 			break ;
 	}
 	free(buff);
-	//free(tmp);
 	return (output(ch, line, ret, fd));
 }

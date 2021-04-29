@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:50:11 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 13:28:08 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 13:51:04 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,13 @@ void	int_list(t_input_list *input_list, char **argv, int argc)
 {
 	int	count_argv;
 	int	count_struct;
+	int	n_num;
 
 	count_argv = 1;
 	count_struct = 0;
 	input_list->n_numbers = argc - 1;
-	input_list->number_list = (int *)malloc(sizeof(int) * input_list->n_numbers);
+	n_num = input_list->n_numbers;
+	input_list->number_list = (int *)malloc(sizeof(int) * n_num);
 	if (input_list->string == 1)
 		count_argv = 0;
 	while (argv[count_argv] != NULL)

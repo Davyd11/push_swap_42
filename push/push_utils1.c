@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 11:20:09 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/28 10:39:45 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 14:09:30 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	divide_to_b(t_input_list *input_list, int media_botton, int media_top)
 	int	x;
 	int	nodos;
 	int	n_moves_max;
+	int	num;
 
 	n = 0;
 	x = 0;
@@ -60,7 +61,8 @@ void	divide_to_b(t_input_list *input_list, int media_botton, int media_top)
 	n_moves_max = how_much(input_list, media_botton, media_top);
 	while (n < nodos && x < n_moves_max)
 	{
-		if (input_list->a->val <= media_top && input_list->a->val >= media_botton)
+		num = input_list->a->val;
+		if (num <= media_top && num >= media_botton)
 		{
 			pb(input_list, 1);
 			x++;
