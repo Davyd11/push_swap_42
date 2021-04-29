@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:50:11 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 10:32:47 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 13:28:08 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	check_arg(int argc, char **argv, t_input_list *input_list)
 	}
 	else if (argc == 1)
 	{
-		write (1, "Error\n", 5);
+		write (1, "Error\n", 6);
 		exit (0);
 	}
 	else

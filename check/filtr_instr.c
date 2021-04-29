@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 10:22:55 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 10:56:43 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 13:10:17 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	filtr_next(t_input_list *input_list)
 		rrr(input_list, 0);
 	else
 	{
-		write(1, "Error\n", 7);
+		write(1, "Error\n", 6);
 		exit (0);
 	}
 }
