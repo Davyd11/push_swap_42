@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:21:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 13:46:26 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 20:21:49 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	main(int argc, char **argv)
 		write(1, "OK\n", 3);
 	free(input_list.number_list);
 	return (0);
-}
+} 
 /*print_stack(&input_list);
 free_lists_a(&input_list);*/
 /*

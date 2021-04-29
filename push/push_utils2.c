@@ -6,31 +6,11 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 11:24:50 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/28 10:40:14 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 20:26:10 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-/*void order(t_input_list *input_list)
-{
-	int n_position;
-	int option;
-	int total_nodes;
-
-	total_nodes = n_nodes(input_list->a);
-	option = 2;
-	n_position = smaller(input_list->a);
-	if (n_position < total_nodes / 2)
-			option = 1;
-	while (smaller(input_list->a) != 1)
-	{
-		if (option == 1)
-			ra(input_list, 1);
-		else
-			rra(input_list, 1);
-	}
-}*/
 
 void	bucle_b(t_input_list *input_list)
 {
