@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 10:33:28 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/28 19:30:55 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 12:54:10 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ void	free_list_b(t_input_list *input_list)
 		input_list->b = input_list->b->next;
 		free(tmp);
 	}
-	free(input_list->b);
 }
 
 void	free_lists_a(t_input_list *input_list)
@@ -68,6 +67,5 @@ void	free_lists_a(t_input_list *input_list)
 		input_list->a = input_list->a->next;
 		free(tmp);
 	}
-	free(input_list->a);
 	free_list_b(input_list);
 }

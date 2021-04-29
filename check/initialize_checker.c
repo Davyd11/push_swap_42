@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:50:11 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/28 10:22:14 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 10:32:47 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ void	int_list(t_input_list *input_list, char **argv, int argc)
 		count_argv++;
 		count_struct++;
 	}
+	if (input_list->string == 1)
+		free(argv);
 }
 
 void	check_arg(int argc, char **argv, t_input_list *input_list)

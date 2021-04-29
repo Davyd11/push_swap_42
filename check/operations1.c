@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 19:25:09 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/28 10:27:22 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 12:33:26 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,10 @@ int	pa(t_input_list *input_list, int program)
 		return (0);
 	if (n_nodes(input_list->a) < 1)
 	{
+		tmp = input_list->b->next;
 		input_list->a = create_new_node(input_list->b->val);
-		input_list->b = input_list->b->next;
+		free(input_list->b);
+		input_list->b = tmp;
 	}
 	else
 	{
@@ -70,6 +72,8 @@ int	pa(t_input_list *input_list, int program)
 		input_list->b = input_list->b->next;
 		input_list->a->next = tmp;
 	}
+	if (n_nodes(input_list->b) < 1)
+		free(input_list->b);
 	if (program == 1)
 		write(1, "pa\n", 3);
 	return (1);
@@ -83,8 +87,10 @@ int	pb(t_input_list *input_list, int program)
 		return (0);
 	if (n_nodes(input_list->b) < 1)
 	{
+		tmp = input_list->a->next;
 		input_list->b = create_new_node(input_list->a->val);
-		input_list->a = input_list->a->next;
+		free(input_list->a);
+		input_list->a = tmp;
 	}
 	else
 	{

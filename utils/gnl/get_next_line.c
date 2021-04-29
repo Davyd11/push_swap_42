@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 10:32:48 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/28 11:22:41 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 12:11:46 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,7 @@ void	ft_strdel(char **as)
 	}
 }
 
-char	*ft_strnew(size_t size)
-{
-	char	*str;
-	size_t	i;
-
-	i = 0;
-	str = (char *)malloc(sizeof(*str) * size + 1);
-	if (str == NULL)
-		return (NULL);
-	while (i <= size)
-	{
-		str[i] = '\0';
-		i++;
-	}
-	return (str);
-}
+/*char	*ft_strnew(size_t size)*/
 
 static int	readline(char **ch, char **line, int fd)
 {
@@ -53,6 +38,7 @@ static int	readline(char **ch, char **line, int fd)
 	aux = ft_strdup(&ch[fd][len + 1]);
 	free(ch[fd]);
 	ch[fd] = aux;
+	//free(aux);///////////////////////////////
 	return (1);
 }
 
@@ -95,10 +81,12 @@ int	get_next_line(int fd, char **line)
 			tmp = ft_strjoin(ch[fd], buff);
 			free(ch[fd]);
 			ch[fd] = tmp;
+			//free(tmp);
 		}
 		if (ft_strchr(ch[fd], '\n'))
 			break ;
 	}
 	free(buff);
+	//free(tmp);
 	return (output(ch, line, ret, fd));
 }

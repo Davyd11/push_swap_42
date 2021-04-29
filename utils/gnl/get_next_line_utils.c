@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/18 15:40:13 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/28 11:19:18 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 12:10:13 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,34 +45,7 @@ char	*ft_strdup(const char *src)
 	return (new);
 }
 
-/*char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*src;
-	int		i;
-	size_t	n;
-
-	n = 0;
-	if (!s)
-		return (NULL);
-	while (s[n] != '\0')
-		n++;
-	if (start > n)
-		return (ft_strdup(""));
-	if (len >= n)
-		len = n;
-	if (!(src = (char *)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	i = 0;
-	len = start + len;
-	while (start < len)
-	{
-		src[i] = s[start];
-		i++;
-		start++;
-	}
-	src[i] = '\0';
-	return (src);
-}*/
+/*char	*ft_substr*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

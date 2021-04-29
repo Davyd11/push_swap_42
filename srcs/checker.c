@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:21:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/28 13:31:35 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/29 12:35:28 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	read_instructions(t_input_list *input_list)
 		filtr_instr(input_list);
 		free(input_list->instructions);
 	}
+	free(input_list->instructions);
 }
 
 int	in_order(t_input_list *input_list)
@@ -50,9 +51,10 @@ int	main(int argc, char **argv)
 		write(1, "KO\n", 3);
 	else
 		write(1, "OK\n", 3);
+	//print_stack(&input_list);
 	free(input_list.number_list);
 	//free_lists_a(&input_list);
-	system("leaks checker");
+	//system("leaks checker");
 	return (0);
 }
 /*print_stack(&input_list);*/
