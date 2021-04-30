@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 11:24:50 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/30 11:13:30 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/30 11:59:53 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,13 @@ void	smallest(t_input_list *input_list)
 
 	smaller_num = position_node(input_list->a, smaller(input_list->a))->val;
 	invertir(input_list);
-	if (input_list->a->next->val > input_list->a->next->next->val)
+	if (input_list->n_numbers >= 3)
 	{
-		rra(input_list, 1, 1);
-		invertir(input_list);
+		if (input_list->a->next->val > input_list->a->next->next->val)
+		{
+			rra(input_list, 1, 1);
+			invertir(input_list);
+		}
 	}
 }
 

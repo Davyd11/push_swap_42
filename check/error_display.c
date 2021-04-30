@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 18:43:33 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 13:28:47 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/30 12:17:56 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	repeat(char **argv)
 		{
 			if (ft_strcmp(argv[n], argv[x]) == 0 && (n != x))
 			{
-				printf("-|%s|-|%s|-\n", argv[n], argv[x]);
 				write(1, "Error\n", 6);
 				exit(0);
 			}
@@ -35,13 +34,15 @@ void	repeat(char **argv)
 	}
 }
 
-void	arg_num(char **argv)
+void	arg_num(char **argv, int str)
 {
 	int	x;
 	int	y;
 
 	y = 0;
 	x = 1;
+	if (str == 1)
+		x = 0;
 	repeat (argv);
 	while (argv[x] != NULL)
 	{

@@ -6,11 +6,25 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 19:25:09 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 12:33:26 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/30 13:41:31 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+int	in_order(t_input_list *input_list)
+{
+	t_stack_n	*tmp;
+
+	tmp = input_list->a;
+	while (tmp->next != NULL)
+	{
+		if (tmp->val >= tmp->next->val)
+			return (1);
+		tmp = tmp->next;
+	}
+	return (0);
+}
 
 int	n_nodes(t_stack_n *head)
 {

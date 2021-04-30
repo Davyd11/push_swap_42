@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:21:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/30 09:35:25 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/30 13:41:39 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,6 @@ void	read_instructions(t_input_list *input_list)
 		free(input_list->instructions);
 	}
 	free(input_list->instructions);
-}
-
-int	in_order(t_input_list *input_list)
-{
-	t_stack_n	*tmp;
-
-	tmp = input_list->a;
-	while (tmp->next != NULL)
-	{
-		if (tmp->val >= tmp->next->val)
-			return (1);
-		tmp = tmp->next;
-	}
-	return (0);
 }
 
 int	main(int argc, char **argv)
