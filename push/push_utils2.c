@@ -6,11 +6,24 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 11:24:50 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/30 10:32:39 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/30 11:13:30 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	smallest(t_input_list *input_list)
+{
+	int				smaller_num;
+
+	smaller_num = position_node(input_list->a, smaller(input_list->a))->val;
+	invertir(input_list);
+	if (input_list->a->next->val > input_list->a->next->next->val)
+	{
+		rra(input_list, 1, 1);
+		invertir(input_list);
+	}
+}
 
 void	greater_450_2(t_input_list *input_list, int med_li)
 {

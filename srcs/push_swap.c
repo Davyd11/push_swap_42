@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:21:08 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/30 10:34:48 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/30 11:07:28 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,9 @@ int	main (int argc, char **argv)
 	med_li = media(&input_list, input_list.a);
 	check_arg(argc, argv, &input_list);
 	input_list.a = list_in(input_list.a, &input_list);
-	if (input_list.n_numbers <= 5)
+	if (input_list.n_numbers <= 3)
+		smallest(&input_list);
+	else if (input_list.n_numbers <= 5 && input_list.n_numbers >= 4)
 		smaller_5(&input_list);
 	else if (input_list.n_numbers <= 80)
 		smaller_80(&input_list);
