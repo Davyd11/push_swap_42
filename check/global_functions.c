@@ -6,13 +6,13 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 09:06:29 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 14:21:27 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/30 10:13:58 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	print_stack(t_input_list *input_list)
+/*void	print_stack(t_input_list *input_list)
 {
 	t_stack_n	*current_a;
 	t_stack_n	*current_b;
@@ -42,7 +42,7 @@ void	print_stack(t_input_list *input_list)
 		loops++;
 	}
 	printf("-----\t-----\n");
-}
+}*/
 
 t_stack_n	*list_in(t_stack_n *head, t_input_list *input_list)
 {

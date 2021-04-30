@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/29 14:15:58 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/04/30 10:33:32 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void		initialize(t_input_list	*input_list, int argc);
 void		int_list(t_input_list *input_list, char **argv, int argc);
 void		check_arg(int argc, char **argv, t_input_list *input_list);
 void		arg_num(char **argv);
+void		greater_450_2(t_input_list *input_list, int med_li);
+void		invertir(t_input_list *input_list);
 int			checker(t_input_list *input_list);
 int			n_nodes(t_stack_n *head);
 void		print_stack(t_input_list *input_list);

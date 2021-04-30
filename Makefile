@@ -6,7 +6,7 @@
 #    By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/31 13:02:36 by dpuente-          #+#    #+#              #
-#    Updated: 2021/04/29 20:17:09 by dpuente-         ###   ########.fr        #
+#    Updated: 2021/04/30 10:06:49 by dpuente-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ normi:
 
 run:					
 						ARG=$(ruby -e "puts (0..100).to_a.shuffle.join(' ')");  ./push_swap $ARG
-						#ARG=$(ruby -e "puts (0..100).to_a.shuffle.join(' ')");  ./push_swap $ARG | ./checker $ARG | wc -l
+						#ARG=$(ruby -e "puts (1..500).to_a.shuffle.join(' ')");  ./push_swap $ARG | ./checker $ARG | wc -l
 
 re:						fclean all
 
