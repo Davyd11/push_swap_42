@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:50:11 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/30 12:24:54 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/05/05 11:05:13 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,11 @@ void	check_arg(int argc, char **argv, t_input_list *input_list)
 		argv = ft_split(argv[1], ' ');
 		while (argv[numbers] != NULL)
 			numbers++;
+		if (numbers <= 1)
+		{
+			write(1, "Error\n", 6);
+			exit (0);
+		}
 		argc = numbers + 1;
 		input_list->string = 1;
 		arg_num(argv, 1);

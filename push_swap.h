@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:25:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/30 12:17:37 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/05/05 10:56:32 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ typedef struct s_input_list
 }				t_input_list;
 
 void		initialize(t_input_list	*input_list, int argc);
+void		repeat(t_input_list *input_list);
 void		int_list(t_input_list *input_list, char **argv, int argc);
 void		check_arg(int argc, char **argv, t_input_list *input_list);
 void		arg_num(char **argv, int str);

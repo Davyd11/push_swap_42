@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:21:03 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/30 13:41:39 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/05/05 11:11:05 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	main(int argc, char **argv)
 	input_list.a = NULL;
 	input_list.b = NULL;
 	check_arg(argc, argv, &input_list);
+	repeat(&input_list);
 	input_list.a = list_in(input_list.a, &input_list);
 	read_instructions(&input_list);
 	if (in_order(&input_list) != 0)
@@ -44,5 +45,5 @@ int	main(int argc, char **argv)
 free_lists_a(&input_list);*/
 /*
 printf("\n\n\n\n-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/\n\n\n\n");
-
+2147483647
 */

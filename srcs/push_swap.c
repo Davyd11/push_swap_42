@@ -6,7 +6,7 @@
 /*   By: dpuente- <dpuente-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 11:21:08 by dpuente-          #+#    #+#             */
-/*   Updated: 2021/04/30 13:42:06 by dpuente-         ###   ########.fr       */
+/*   Updated: 2021/05/05 11:11:43 by dpuente-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ int	main (int argc, char **argv)
 	input_list.b = NULL;
 	med_li = media(&input_list, input_list.a);
 	check_arg(argc, argv, &input_list);
+	repeat(&input_list);
 	input_list.a = list_in(input_list.a, &input_list);
 	if (in_order(&input_list) == 0)
 		exit(0);
@@ -101,7 +102,6 @@ int	main (int argc, char **argv)
 		greater_80(&input_list);
 	else if (input_list.n_numbers >= 450)
 		greater_450(&input_list);
-	print_stack(&input_list);
 	free(input_list.number_list);
 	return (0);
 }
